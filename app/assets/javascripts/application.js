@@ -20,12 +20,13 @@
 //= require angular-resource/angular-resource
 
 //  ROOM
-// require room/room.module.js
+//= require room/room.component.js
+//= require room/room.service.js
 
 //  ROOM-LIST
-// require room-list/room-list.component.js
+//= require room-list/room-list.component.js
 
 
 
-// Initialize the app
+//  INITIALIZE THE APP
 //= require app.config.js
