@@ -18,4 +18,14 @@
 //= require_tree ./templates
 //= require angular-animate/angular-animate
 //= require angular-resource/angular-resource
-//= require_tree .
+
+//  ROOM
+// require room/room.module.js
+
+//  ROOM-LIST
+// require room-list/room-list.component.js
+
+
+
+// Initialize the app
+//= require app.config.js
