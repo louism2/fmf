@@ -1,2 +1,5 @@
-<p>Some stuff here</p>
-<p>{{ "hello"+"world" }}</p>
+<ul>
+  <li ng-repeat="room in $ctrl.rooms">
+    <a href="#!/rooms/{{room.id}}" >{{room.name}}</a>
+  </li>
+</ul>

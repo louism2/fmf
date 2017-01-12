@@ -25,6 +25,7 @@
 
 //  ROOM-LIST
 //= require room-list/room-list.component.js
+//= require room-list/room-list.service.js
 
 
 

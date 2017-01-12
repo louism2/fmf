@@ -13,6 +13,9 @@ angular.module('fmfApp').config(['$locationProvider' ,'$routeProvider',
     $routeProvider.when('/rooms', {
         template: '<room-list></room-list>'
       }).
+      when('/rooms/:room_id', {
+        template: '<room></room>'
+      }).
       otherwise('/rooms');
-  }
+    }
 ]);
