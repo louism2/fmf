@@ -13,3 +13,19 @@
  *= require_tree .
  *= require_self
  */
+
+ body, html {
+  height: 100%;
+  width: 100%;
+}
+
+ .room{
+   height: 400px;
+   width: 100%;
+ }
+
+
+#map_container{
+  height: 400px;
+  width: 400px;
+}
