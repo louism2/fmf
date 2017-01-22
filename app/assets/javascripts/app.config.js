@@ -1,3 +1,9 @@
+if(typeof FMF == 'undefined') {
+  FMF = {};
+}
+FMF.map_key = 'AIzaSyAztWf6t2ni0Le22YP34VxA6jrRUML9WG8';
+
+
 angular.module('fmfApp', [
   'templates',
   'ngAnimate',
@@ -19,3 +25,7 @@ angular.module('fmfApp').config(['$locationProvider' ,'$routeProvider',
       otherwise('/rooms');
     }
 ]);
+
+
+
+
