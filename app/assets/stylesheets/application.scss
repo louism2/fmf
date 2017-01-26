@@ -14,18 +14,22 @@
  *= require_self
  */
 
- body, html {
-  height: 100%;
-  width: 100%;
+$font-stack:    Helvetica, sans-serif;
+$branding-color: #428ff4;
+
+body {
+  margin: 0;
+  font-size: 16px;
+  font: 100% $font-stack;
 }
 
- .room{
-   height: 400px;
-   width: 100%;
- }
+header {
+  background-color: $branding-color;
+  height: 4em;
 
-
-#map_container{
-  height: 400px;
-  width: 400px;
+  h1 {
+    font-size: 2em;
+    margin: 0;
+  }
 }
+
