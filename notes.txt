@@ -1,0 +1,31 @@
+users
+  email
+  first_name
+  last_name
+  phone_number
+
+rooms
+  user_id
+  expires_at
+  last_location_request_at
+  last_location_request_user_id
+  created_at
+  updated_at
+
+room_invites
+  room_id
+  user_id
+  phone_number
+  inviter_id
+  created_at
+
+room_subscriptions
+  room_id
+  user_id
+  inviter_id
+  last_location_given_at --> last time a user pushed location
+
+
+
+
+
