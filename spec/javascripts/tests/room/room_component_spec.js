@@ -1,34 +1,32 @@
 describe('room_component', function(){
 
-angular.module('room')
+  var $compile,
+      $rootScope,
+      temp;
 
-  //  beforeEach(function(){
-  //    angular.module('room'))
-  //  });
+  beforeEach(function(){
 
-  beforeEach(inject(function($templateCache) {
-    var directiveTemplate = null;
-    var req = new XMLHttpRequest();
-    req.onload = function() {
-        directiveTemplate = this.responseText;
-    };
-    // Note that the relative path may be different from your unit test HTML file.
-    // Using `false` as the third parameter to open() makes the operation synchronous.
-    // Gentle reminder that boolean parameters are not the best API choice.
-    req.open("get", "../../../assets/templates/room/room.template.html", false);
-    req.send();
-    $templateCache.put("test", directiveTemplate);
-    console.log($templateCache.get("test"))
-  }));
+    //console.log(temp)
+  })
 
   //beforeEach(angular.module('fmfApp'))
 
-  it('Replaces the element with the appropriate content', function() {
-    //$templateRequest("/templates/room/room.template.html").then(function(html){
-      //var template = angular.element(html);
-      // console.log(template)
-          //$compile(template)(scope);
-    //});
+
+
+  // Store references to $rootScope and $compile
+  // so they are available to all tests in this describe block
+  beforeEach(inject(function(_$compile_, _$rootScope_){
+    // The injector unwraps the underscores (_) from around the parameter names when matching
+    $compile = _$compile_;
+    $rootScope = _$rootScope_;
+    loadTemplate('room/room.template.html');
+  }));
+
+  it('Replaces the element with the appropriate content', function($templateCache) {
+    var t = $templateCache.get('room/room.template.html')
+    var el = $compile(t)($rootScope);
+    $rootScope.$digest();
+    console.log(el.html());
   });
 
 });
